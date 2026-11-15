@@ -1,0 +1,5 @@
+In the Mail to it will request from you to select the email platform that you use such as outlook or Gmail
+and then will redirect you to the your email with a mail box opened to send an email to the clicked on email path
+
+
+in the link with target=_blank it will open the page in another tab without getting redirected out from the place that you are currently stopped at
