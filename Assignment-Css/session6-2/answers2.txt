@@ -1,0 +1,18 @@
+1. Specificity:
+- Prediction: Purple.
+- Result: Purple.
+- Winning rule: #course-title { color: purple; }
+- Why: An ID (#course-title) is stronger than a class (.title) and a tag (h1), so it wins even if h1 is written last.
+
+2. Source Order:
+- Prediction: Orange first, then green.
+- (at the bottom): Orange, because both rules use .title (same strength) and the last one wins.
+- (above the green rule): Green, because .title { color: green; } is now lower in the file.
+
+3. Inheritance:
+- Rule used: .course-card > p { color: teal; }
+- Why: The > sign selects only the direct <p> inside .course-card (making it teal). The second <p> is inside a <div>, so it stays the card's color (#374151).
+
+4. Link Test:
+- Hover: Moving the mouse over the link changes its color.
+- Tab key: Pressing Tab puts a visible outline around the link.
