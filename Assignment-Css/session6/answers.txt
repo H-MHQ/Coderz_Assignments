@@ -1,0 +1,6 @@
+index.html: styles.css
+courses.html: styles.css
+
+Selector: .course-card[data-status="full"] .status
+Explanation: It selects the status text (<span class="status">) inside a course card
+ (<article class="course-card">) when that card's data-status is set to "full".
