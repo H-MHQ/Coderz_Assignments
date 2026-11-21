@@ -1,0 +1,29 @@
+:root {
+  --brand: #1d4ed8;
+}
+
+h1,
+.course-card h2 {
+  color: var(--brand);
+}
+
+.course-card {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.course-card .status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.course-card[data-status="open"] .status {
+  background-color: #dcfce7;
+}
+
+.course-card[data-status="full"] .status {
+  background-color: #e5e7eb;
+}
