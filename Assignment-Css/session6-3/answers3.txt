@@ -1,0 +1,28 @@
+index3.html
+.Removed style="color: tomato;" from <h1> To take the external color from the css file.
+
+styles3.css
+1-Fixed type var(--brnad) to var(--brand) //Line13
+2-Added missing dot . to .course-card //line 17
+3-Changed .course-card p to .course-card > p so only the first intro paragraph gets effected //line 25
+4-Changed 1.5em to 1.5rem on h2 so it equals 24px instead of 30px. //line 22
+5-Removed the space in .action :hover //line 38
+
+=========================================================================================
+1. Heading Font Size (h2):
+- Before: h2 was 30px in DevTools Computed.
+- Buggy line: font-size: 1.5em;
+- Why: "em" used the card size (1.5 x 20px = 30px) instead of the root size.
+- Fix & Test: Changed it to 1.5rem. Checked DevTools Computed and h2 is now 24px (1.5 x 16px root) while the card stays 20px.
+
+2. Brand Color (--brand):
+- Before: h1 was tomato red and h2 was black.
+- Buggy lines: <h1 style="color: tomato;"> and color: var(--brnad);
+- Why: The inline style overrode CSS, and "--brnad" had a typo.
+- Fix & Test: Removed the inline style and fixed the typo to var(--brand). Changed --brand to red in :root to test; both h1 and h2 turned red, then changed it back to #12546c.
+
+3. Card & Paragraph Backgrounds:
+- Before: The card had no blue background, and all paragraphs inside it had a yellow background.
+- Buggy lines: course-card { background: #eef5ff; } and .course-card p { background: #fff4d9; }
+- Why: "course-card" missed a dot (.), and ".course-card p" selected every paragraph instead of just the first one.
+- Fix & Test: Added the dot (.course-card) and used .course-card > p. Checked the browser: the card is #eef5ff, only the first paragraph is #fff4d9, and the link turns #6845a8 on hover and gets a 3px orange outline with Tab.
